@@ -10,7 +10,7 @@ type Props = {
     activity: Activity
 }
 
-export default function ActivityDetailsInfo({activity}) {
+export default function ActivityDetailsInfo({activity} : Props) {
     
     const [mapOpen, setMapOpen] = useState(false);
     return (
