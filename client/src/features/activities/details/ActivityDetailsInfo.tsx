@@ -3,7 +3,6 @@ import { Box, Button, Divider, Grid2, Paper, Typography } from "@mui/material";
 import { formatDate } from "../../../lib/util/util";
 import type { Activity } from "../../../lib/types";
 import { useState } from "react";
-import MapComponents from "../../../app/shared/components/MapComponent";
 import MapComponent from "../../../app/shared/components/MapComponent";
 
 type Props = {
@@ -15,7 +14,6 @@ export default function ActivityDetailsInfo({activity} : Props) {
     const [mapOpen, setMapOpen] = useState(false);
     return (
         <Paper sx={{ mb: 2 }}>
-
             <Grid2 container alignItems="center" pl={2} py={1}>
                 <Grid2 size={1}>
                     <Info color="info" fontSize="large" />
@@ -53,8 +51,6 @@ export default function ActivityDetailsInfo({activity} : Props) {
                     <MapComponent position={[activity.latitude, activity.longitude]} venue={activity.venue} />
                 </Box>
             )}
-
-
         </Paper>
     )
 }
